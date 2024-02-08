@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  overflow-y: scroll;
+}
+.head {
+  margin-top: 50px;
+}
+.head h1{
+  margin: 10px 0;
+}
+.guessDiv .guessedWord {
+  height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 100px auto;
+}
+.guessDiv .guessedWord span {
+  height: 40px;
+  width: 40px;
+  font-size: 35px;
+  text-align: center;
+  position: relative;
+  margin: 10px;
+}
+.guessDiv .guessedWord span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  top: 100%;
+  left: 0;
+}
+.guessDiv .alphabet span{
+  background: grey;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  font-size: 22px;
+  text-align: center;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+.guessDiv .alphabet span:hover{
+  background: rgba(10, 10, 10, 0.7);
+}
+
+.resultDialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  /* padding: 50px; */
+  border-radius: 15px;
+  color: #000;
+  width: 75%;
+  max-width: 500px;
+}
+.resultDialog h1{
+  margin: 0 0 30px 0;
+}
+.resultDialog img {
+  height: 120px;
+  width: 120px;
+}
+.resultDialog button {
+  display: block;
+  margin: 15px auto;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.resultDialog button:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+
+@media only screen and (max-width: 425px) {
+.resultDialog h1{
+    font-size: 0 0 22px 0;
+}
+.resultDialog h2{
+    font-size: 20px;
+}
+.resultDialog button {
+  padding: 10px 20px;
+  font-size: 20px;
+  height: auto;
+}
+}
